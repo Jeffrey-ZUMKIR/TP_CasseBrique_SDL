@@ -140,7 +140,7 @@ void CBall::startRound(bool *bRoundStart)
 	*bRoundStart = false;
 }
 
-//GOAL	: Kepp the ball next to the player
+//GOAL	: Keep the ball next to the player
 void CBall::followPlayer(CPlayer player)
 {
 	this->setX(player.getX() + (player.getW() / 2) - (this->getW() / 2));

@@ -238,6 +238,7 @@ void CGame::setBRunning(bool bRunning)
 	this->bRunning = bRunning;
 }
 
+//GOAL	: Check if there is anymore lives or any more bricks
 bool CGame::checkWinCondition()
 {
 	if (PV == 0) {
@@ -253,6 +254,7 @@ bool CGame::checkWinCondition()
 	return true;
 }
 
+//Reset every variable
 void CGame::restartGame(int WWIDTH, int WHEIGHT)
 {
 	//Start of round
