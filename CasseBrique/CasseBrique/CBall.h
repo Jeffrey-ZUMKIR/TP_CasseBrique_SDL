@@ -8,6 +8,7 @@
 class CBall : public CObject {
 private:
 	int speedX, speedY;
+	int maxBallSpeed;
 public:
 	//Constructeur
 	CBall();
@@ -18,10 +19,12 @@ public:
 	//Accesseurs
 	int getSpeedX();
 	int getSpeedY();
+	int getMaxSpeed();
 
 	//Mutateurs
 	void setSpeedX(int speedX);
 	void setSpeedY(int speedY);
+	void setMaxSpeed(int maxSpeed);
 
 	void checkPos(int WWIDTH, int WHEIGHT, CPlayer player, CBricks bricks[][nbColBrick], int *score, bool *bRoundStart, int* PV);
 	void move(int WWIDTH, int WHEIGHT);

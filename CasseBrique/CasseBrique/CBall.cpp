@@ -23,6 +23,11 @@ int CBall::getSpeedY()
 	return speedY;
 }
 
+int CBall::getMaxSpeed()
+{
+	return maxBallSpeed;
+}
+
 void CBall::setSpeedX(int speedX)
 {
 	this->speedX = speedX;
@@ -31,6 +36,11 @@ void CBall::setSpeedX(int speedX)
 void CBall::setSpeedY(int speedY)
 {
 	this->speedY = speedY;
+}
+
+void CBall::setMaxSpeed(int maxSpeed)
+{
+	this->maxBallSpeed = maxSpeed;
 }
 
 void CBall::checkPos(int WWIDTH, int WHEIGHT, CPlayer player, CBricks bricks[][nbColBrick], int *score, bool *bRoundStart, int *PV)
@@ -62,8 +72,12 @@ void CBall::checkPos(int WWIDTH, int WHEIGHT, CPlayer player, CBricks bricks[][n
 				float bounceAngle = static_cast<float>(normalizedRelativeIntersectionY * 4 * PI / 12);
 
 				//Give the new speed for the ball
-				this->speedX = static_cast<int>(MAXBALLSPEED * -sin(bounceAngle));
-				this->speedY = static_cast<int>(MAXBALLSPEED * -cos(bounceAngle));
+				this->speedX = static_cast<int>(getMaxSpeed() * -sin(bounceAngle));
+				this->speedY = static_cast<int>(getMaxSpeed() * -cos(bounceAngle));
+
+				if (this->getMaxSpeed() < 15) {
+					this->setMaxSpeed(this->getMaxSpeed() + 1);
+				}
 			}
 		}
 	}

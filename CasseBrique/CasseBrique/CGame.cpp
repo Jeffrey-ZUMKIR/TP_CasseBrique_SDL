@@ -91,12 +91,13 @@ bool CGame::init(const char* title, int xpos, int ypos, int WWIDTH, int WHEIGHT,
 	//Set player
 	player.setRect((WWIDTH/2)-75, WHEIGHT-20, 150, 20);
 	player.setState(eState::IDLE);
-	player.setSpeed(5);
+	player.setSpeed(7);
 
 	//Set ball
 	ball.setRect((WWIDTH / 2) - 10, WHEIGHT - 100, 20, 20);
 	ball.setSpeedX(8);
 	ball.setSpeedY(8);
+	ball.setMaxSpeed(8);
 
 	//Set all the bricks
 	for (int n_i = 0; n_i < nbLineBrick; n_i++) {
@@ -160,6 +161,7 @@ void CGame::update(int WWIDTH, int WHEIGHT)
 	player.move(WWIDTH);
 	//if begin of the round, ball follow the player
 	if (bRoundStart) {
+		ball.setMaxSpeed(8);
 		ball.followPlayer(player);
 	}
 	else {

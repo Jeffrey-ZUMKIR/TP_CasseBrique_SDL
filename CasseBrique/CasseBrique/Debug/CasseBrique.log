@@ -1,3 +1,7 @@
-﻿  CGame.cpp
-D:\Home\Documents\Ludus B\Algo\C++\TP_CasseBrique_SDL\CasseBrique\CasseBrique\CGame.cpp(111): warning C4715: 'CGame::init' : les chemins de contrôle ne retournent pas tous une valeur
+﻿  CBall.cpp
+  CGame.cpp
+  CPlayer.cpp
+  main.cpp
+  Génération de code en cours...
+D:\Home\Documents\Ludus B\Algo\C++\TP_CasseBrique_SDL\CasseBrique\CasseBrique\CGame.cpp(112): warning C4715: 'CGame::init' : les chemins de contrôle ne retournent pas tous une valeur
   CasseBrique.vcxproj -> D:\Home\Documents\Ludus B\Algo\C++\TP_CasseBrique_SDL\CasseBrique\Debug\CasseBrique.exe
